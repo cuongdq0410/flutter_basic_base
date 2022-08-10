@@ -8,19 +8,26 @@ class FeedScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [
-          const SizedBox(
-            child: Center(child: Text('Feed')),
-          ),
-          ElevatedButton(
-            onPressed: () {
+      body: Center(
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            const SizedBox(
+              child: Center(child: Text('Feed')),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                /// Nest Navigation
+                AppNavigator.navigateTo(context, RouteDefine.loginScreen.name);
 
-              AppNavigator.navigateTo(context, RouteDefine.loginScreen.name);
-            },
-            child: const Text('Go to Login'),
-          ),
-        ],
+                /// Not nest navigation
+                // AppNavigator.navigateTo(
+                //     AppNavigator.currentContext!, RouteDefine.loginScreen.name);
+              },
+              child: const Text('Go to Login'),
+            ),
+          ],
+        ),
       ),
     );
   }
