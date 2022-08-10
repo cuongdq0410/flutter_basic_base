@@ -23,12 +23,7 @@ void main() async {
   Localization.initApp(
     BlocProvider.value(
       value: injector<AppCubit>(),
-      child: BlocBuilder(
-        bloc: injector<AppCubit>(),
-        builder: (context, state) {
-          return const MyApp();
-        },
-      ),
+      child: const MyApp(),
     ),
   );
 }
