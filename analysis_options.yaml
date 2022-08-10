@@ -9,3 +9,4 @@ linter:
   rules:
     depend_on_referenced_packages: false
     prefer_const_constructors: true
+    avoid_print: false

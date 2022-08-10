@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_basic_base/base/base_screen.dart';
 
 enum NavigatorStackAction {
   /// Keep all of stacks

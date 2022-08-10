@@ -1,7 +1,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_basic_base/presentation/pages/home/ui/wigdet/tab_item.dart';
-import 'package:meta/meta.dart';
 
 part 'home_state.dart';
 
