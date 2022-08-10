@@ -1,0 +1,11 @@
+include: package:flutter_lints/flutter.yaml
+
+analyzer:
+  exclude:
+    - lib/generated/intl/*.dart
+    - lib/**/*.g.dart
+
+linter:
+  rules:
+    depend_on_referenced_packages: false
+    prefer_const_constructors: true
