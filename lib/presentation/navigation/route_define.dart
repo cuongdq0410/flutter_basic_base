@@ -32,25 +32,28 @@ class GenerateRoute {
 
   static Widget widgetBuilder<T extends Cubit, S extends Widget>(
     S screen, {
-    List<T>? listCubits,
     T? cubit,
   }) {
-    return listCubits == null && cubit == null
+    return cubit == null
         ? screen
-        : MultiBlocProvider(
-            providers: [
-              if (cubit != null)
-                BlocProvider<T>(
-                  create: (context) => cubit,
-                ),
-              if (listCubits != null)
-                ...listCubits.map(
-                  (c) => BlocProvider<T>(
-                    create: (context) => c,
-                  ),
-                )
-            ],
+        : BlocProvider<T>(
+            create: (context) => cubit,
             child: screen,
           );
   }
 }
+
+/// Multi bloc provider
+/*
+MultiBlocProvider(
+providers: [
+BlocProvider<LoginCubit>(
+create: (context) => LoginCubit(),
+),
+BlocProvider<HomeCubit>(
+create: (context) => HomeCubit(),
+),
+],
+child: const LoginScreen(),
+),
+*/
